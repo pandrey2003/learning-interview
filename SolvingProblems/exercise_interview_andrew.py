@@ -22,7 +22,7 @@
 # Converting to sets and then finding intersection
 def find_if_contains_common_items(f_list: list, s_list: list):
     f_set = set(f_list)  # time: O(n), space: O(n)
-    s_set = set(s_list)  # time: O(n), space: O(n)
+    s_set = set(s_list)  # time: O(k), space: O(k)
     set_intersection = f_set.intersection(s_set)
     # time: O of min len of sets, O(n);
     # space: O(n) - the same logic as single intersection
