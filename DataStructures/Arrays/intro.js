@@ -3,7 +3,7 @@ var strings = ["a", "b", "c", "d"];
 
 console.log("The element on index 2 is:", strings[2]);  // O(1) for lookup
 
-// push - O(1)
+// push - O(1) -> can be O(n)!
 strings.push("e");
 
 // pop - O(1)
