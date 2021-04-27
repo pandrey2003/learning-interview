@@ -12,6 +12,7 @@ function mergeSortedArrays(arr1, arr2) {
             break;
         }
         if (arr1[0] <= arr2[0]) {
+            // shift instead of splice()
             mergedArray.push(arr1[0]);
             arr1.shift();
             continue;
