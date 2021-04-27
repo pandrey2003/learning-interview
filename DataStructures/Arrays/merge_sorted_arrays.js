@@ -13,11 +13,11 @@ function mergeSortedArrays(arr1, arr2) {
         }
         if (arr1[0] <= arr2[0]) {
             mergedArray.push(arr1[0]);
-            arr1.splice(0, 1);
+            arr1.shift();
             continue;
         }
         mergedArray.push(arr2[0]);
-        arr2.splice(0, 1);
+        arr2.shift();
     }
     return mergedArray;
 }
