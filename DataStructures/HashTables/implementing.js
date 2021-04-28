@@ -23,7 +23,7 @@ class HashTable {
     get(key) {
         let address = this._hash(key);
         let currentBucket = this.data[address];
-        if (currentBucket.length >= 1) {
+        if (currentBucket && currentBucket.length >= 1) {
             for (let subBucket of currentBucket) {
                 if (subBucket[0] === key) {
                     return subBucket[1];
@@ -32,11 +32,25 @@ class HashTable {
         }
         return undefined;
     }
+
+    keys() {
+        const keysArray = [];
+        for (let element of this.data) {
+            if (element) {
+                keysArray.push(element[0][0])
+            }
+        }  // this would become O(n^2)
+        // if taking into account hash collisions
+        return keysArray;
+    }
 }
 
 
-const myHashTable = new HashTable(2);
+const myHashTable = new HashTable(50);
 console.log(myHashTable.set("grapes", 100));
 console.log(myHashTable.set("apples", 54));
+console.log(myHashTable.set("oranges", 10))
 console.log(myHashTable.get("grapes"));
 console.log(myHashTable.get("banana"));
+console.log("");
+console.log(myHashTable.keys());
