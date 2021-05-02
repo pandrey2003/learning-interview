@@ -70,7 +70,7 @@ class SinglyLinkedList:
 
 
 if __name__ == "__main__":
-    linked_list = LinkedList()
+    linked_list = SinglyLinkedList()
     print("appending 3")
     linked_list.append(3)
     linked_list.print_all_nodes()
