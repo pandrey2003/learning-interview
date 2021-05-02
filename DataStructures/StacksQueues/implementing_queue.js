@@ -46,10 +46,13 @@ class Queue {
     }
 }
 
-const newQueue = new Queue();
-console.log(newQueue.isEmpty());
-console.log(newQueue.enqueue("abc"));
-console.log(newQueue.isEmpty());
-console.log(newQueue.enqueue(245));
-console.log(newQueue.peek());
-console.log(newQueue.dequeue());
+if (require.main === module) {
+    const newQueue = new Queue();
+    console.log(newQueue.isEmpty());
+    console.log(newQueue.enqueue("abc"));
+    console.log(newQueue.isEmpty());
+    console.log(newQueue.enqueue(245));
+    console.log(newQueue.peek());
+    console.log(newQueue.dequeue());
+    console.log(newQueue.peek());
+}

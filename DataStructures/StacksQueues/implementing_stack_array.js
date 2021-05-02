@@ -11,7 +11,7 @@ class Stack {
     push(value) {
         // add the item to the top of the stack
         this.array.push(value);
-        return this.top;
+        return this.array;
     }
 
     pop() {
@@ -25,12 +25,14 @@ class Stack {
     }
 }
 
-const myStack = new Stack();
-console.log(myStack.isEmpty());
-myStack.push(2);
-console.log(myStack.isEmpty());
-console.log(myStack.peek());
-myStack.push(true);
-console.log(myStack.peek());
-console.log(myStack.pop());
-console.log(myStack.peek());
+if (require.main === module) {
+    let myStack = new Stack();
+    console.log("Stack is empty:", myStack.isEmpty());
+    myStack.push(2);
+    console.log("After push(2) stack is empty:", myStack.isEmpty());
+    console.log("The last item in stack:", myStack.peek());
+    myStack.push(true);
+    console.log("The last item after push(true):", myStack.peek());
+    console.log("Popping the last item:", myStack.pop());
+    console.log("The last item in stack:", myStack.peek());
+}
