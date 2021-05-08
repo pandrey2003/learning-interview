@@ -32,7 +32,6 @@ class BinarySearchTree:
             current_node.right = new_node
             break
 
-
     def lookup(self, value):
         if self.root is None:
             return "No nodes in BST, lookup aborted"
