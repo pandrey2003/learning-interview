@@ -1,0 +1,4 @@
+function inception() {
+    debugger;
+    inception();
+}
