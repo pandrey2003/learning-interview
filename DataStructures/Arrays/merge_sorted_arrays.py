@@ -2,19 +2,21 @@ def merge_sorted_lists(f_list: list, s_list: list):
     # Time complexity: O(n)
     # Space complexity: O(1)
     merged_list = []
-    while f_list or s_list:
-        if not f_list:
-            merged_list.extend(s_list)
+    f_list_index = 0
+    s_list_index = 0
+    while f_list_index < len(f_list) or s_list_index < len(s_list):
+        if f_list_index == len(f_list):
+            merged_list.extend(s_list[s_list_index:])
             break
-        if not s_list:
-            merged_list.extend(f_list)
+        if s_list_index == len(s_list):
+            merged_list.extend(f_list[f_list_index:])
             break
-        if f_list[0] <= s_list[0]:
-            merged_list.append(f_list[0])
-            f_list.pop(0)
+        if f_list[f_list_index] <= s_list[s_list_index]:
+            merged_list.append(f_list[f_list_index])
+            f_list_index += 1
             continue
-        merged_list.append(s_list[0])
-        s_list.pop(0)
+        merged_list.append(s_list[s_list_index])
+        s_list_index += 1
     return merged_list
 
 

@@ -1,4 +1,4 @@
-function fibonacciRecursive(n) {
+function fibonacciRecursive(n) { // O(2^n)
     // 0, 1, 1, 2, 3, 5,...
     if (n === 0) {
         return 0;
@@ -9,7 +9,7 @@ function fibonacciRecursive(n) {
     return fibonacciRecursive(n-1)+fibonacciRecursive(n-2);
 }
 
-function fibonacciIterative(n) {
+function fibonacciIterative(n) { // O(n)
     // 0, 1, 1, 2, 3, 5,...
     let arr = [0, 1];
     for (let i = 2; i <=n; i++) {
