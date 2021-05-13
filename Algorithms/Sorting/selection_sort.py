@@ -1,7 +1,7 @@
 def selection_sort(input_list: list):
     # Time complexity: O(n^2)
     # Space complexity: O(1)
-    if not (isinstance(input_list, list) and input_list):
+    if not isinstance(input_list, list):
         return TypeError("Check your input")
     for traverse_index in range(len(input_list), 0, -1):
         for i in range(len(input_list)-traverse_index+1, len(input_list)):
