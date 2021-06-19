@@ -1,0 +1,2 @@
+This directory is inspired by T. Shemsedinov's lessons I learnt at https://www.youtube.com/playlist?list=PLHhi8ymDMrQZad6JDh6HRzY1Wz5WB34w0.
+The section includes only questions related to the basics of programming, not JS-related.
